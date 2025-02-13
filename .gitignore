@@ -1,0 +1,75 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+*.env
+*.venv
+Pipfile
+Pipfile.lock
+
+# Django specific
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Secret keys and configuration files
+config/settings/local.py
+config/settings/.env
+*.pem
+
+# Logs
+logs/
+*.log
+*.out
+*.err
+
+# Django Migrations
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.pyo
+*/migrations/*.log
+
+# PostgreSQL
+*.pgsql
+*.sqlite3
+*.db
+pgdata/
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore macOS and Linux system files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Ignore Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Ignore compiled and cached files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# Ignore Docker files
+docker-compose.override.yml
+.dockerignore
+
+# Ignore Swagger/OpenAPI generated files
+swagger.json
+swagger.yaml
