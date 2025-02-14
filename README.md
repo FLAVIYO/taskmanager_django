@@ -36,7 +36,7 @@ Before running the application, ensure you have the following installed:
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/FLAVIYO/taskmanager_django.git
-cd task-management-api
+cd taskmanager_django
 ```
 ### 2. Install Dependencies
 
