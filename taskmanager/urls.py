@@ -25,7 +25,6 @@ schema_view = get_schema_view(
         title="Task Management API",
         default_version='v1',
         description="API documentation for the Task Management system.",
-        terms_of_service="https://yourwebsite.com/terms/",
         contact=openapi.Contact(email="shongwe1408@gmail.com"),
         license=openapi.License(name="MIT License"),
     ),

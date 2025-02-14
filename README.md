@@ -62,19 +62,19 @@ DB_PORT=5432
 Apply database migrations:
 
 ```bash
-python manage.py migrate
+python3 manage.py migrate
 ```
 ### 5. Create a Superuser (Admin)
 Create an admin user to access the Django admin panel:
 
 ```bash
-python manage.py createsuperuser
+python3 manage.py createsuperuser
 ```
 ### 6. Start the Development Server
 Run the Django development server:
 
 ```bash
-python manage.py runserver
+python3 manage.py runserver
 ```
 - The admin is available at http://localhost:8000/admin/
 - The swagger ui is available at http://localhost:8000/doc/
