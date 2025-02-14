@@ -4,14 +4,13 @@ from .models import CustomUser
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields = ['id', 'email', 'password', 'role']  # Include 'role' if you need it
+        fields = ['id', 'email', 'password', 'role']  
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
-        # Default the role to 'USER' for new users
         user = CustomUser.objects.create_user(
             email=validated_data['email'],
             password=validated_data['password'],
-            role=validated_data.get('role', 'USER')  # Ensure role is set, default is 'USER'
+            role=validated_data.get('role', 'USER')
         )
         return user

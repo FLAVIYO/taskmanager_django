@@ -6,7 +6,7 @@ class CustomUserManager(BaseUserManager):
         if not email:
             raise ValueError("The Email field must be set")
         email = self.normalize_email(email)
-        extra_fields.setdefault("role", "USER")  # Default role
+        extra_fields.setdefault("role", "USER")  
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
@@ -18,7 +18,7 @@ class CustomUserManager(BaseUserManager):
         return self.create_user(email, password, **extra_fields)
 
 class CustomUser(AbstractUser):
-    username = None  # Remove username field
+    username = None 
     email = models.EmailField(unique=True)
     
     ROLE_CHOICES = [
@@ -29,10 +29,9 @@ class CustomUser(AbstractUser):
 
     objects = CustomUserManager()
 
-    USERNAME_FIELD = "email"  # Use email as the primary identifier
-    REQUIRED_FIELDS = []  # No additional required fields
+    USERNAME_FIELD = "email"  
+    REQUIRED_FIELDS = []  
 
-    # Fix related_name conflicts
     groups = models.ManyToManyField(
         Group,
         verbose_name="groups",
