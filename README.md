@@ -76,7 +76,63 @@ Run the Django development server:
 ```bash
 python manage.py runserver
 ```
-The API endpoints be available at http://localhost:8000/doc/
+- The admin is available at http://localhost:8000/admin/
+- The swagger ui is available at http://localhost:8000/doc/
+- The API endpoints be available at http://localhost:8000/api/
+
+## Example Requests
+
+### Signup
+
+**Headers:**
+- Content-Type: Content-Type
+
+**POST /api/signup/**
+
+```bash
+{
+  "email": "newuser@example.com",
+  "password": "strongpassword",
+}
+ ```
+ ### or  (but not recommended, as its safer to edit roles in the admin ui)
+
+ ```bash
+{
+  "email": "newuser@example.com",
+  "password": "strongpassword",
+  "password": "ADMIN",
+}
+ ```
+
+### Login
+
+**POST /api/login/**
+
+```bash
+{
+  "email": "newuser@example.com",
+  "password": "strongpassword",
+}
+ ```
+
+### Create Task
+
+
+**Headers:**
+- Content-Type: Content-Type
+- Authorization: Bearer <your_access_token>
+
+**POST /api/tasks/**
+
+```bash
+{
+    "title": "Finish Project",
+    "description": "Complete the Task Management API",
+    "due_date": "2024-12-31T00:00:00Z",
+}
+```     
+
 
 ## Running Tests
 
