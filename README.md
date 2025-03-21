@@ -101,7 +101,7 @@ python3 manage.py runserver
 {
   "email": "newuser@example.com",
   "password": "strongpassword",
-  "password": "ADMIN",
+  "role": "ADMIN",
 }
  ```
 
